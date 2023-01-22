@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!--Gurraj Singh 2023-->
+<head>
+    <title>Gurraj's Image Generator</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+<body>
+    <h1>Gurraj's Image Generator</h1>
+    <h3>Made using OpenAI's API</h3>
+    <form action="/" method="post">
+        <input type="text" name="image" placeholder="Enter the image you want to generate" required />
+        <input type="submit" value="Generate image" />
+    </form>
+    {% if result %}
+    <img src= {{ result }} alt="Image requested">
+    {% endif %}
+</body>
